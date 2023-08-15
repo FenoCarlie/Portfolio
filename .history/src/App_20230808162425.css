@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aqua;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+
+.App {
+  text-align: center;
+}
+
+
+.active {
+  color:#DECB1D !important ;
+}
+
+.my_navbar {
+  background-color: #474747;
+}
+
+.logo {
+  display: flex;
+  width: 273px;
+  height: 92px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+
+  color: #DECB1D;
+  text-align: center;
+  font-family: Rockwell Extra Bold;
+  font-size: 60px;
+  font-style: normal;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.point {
+  color: #FFF;
+  font-family: Rockwell Extra Bold;
+  font-size: 60px;
+  font-style: normal;
+  line-height: normal;
+}

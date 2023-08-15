@@ -1,0 +1,19 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+
+.active {
+  color:#DECB1D !important ;
+}
+
+.my_navbar {
+  background-color: #5a68d1;
+}

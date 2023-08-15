@@ -1,0 +1,29 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+
+.active {
+  color:#DECB1D !important ;
+}
+
+/*.my_navbar {
+  background-color: #DECB1D;
+  margin: auto;
+  position: fixed;
+  left: 10%;
+  right: 10%;
+}*/
+
+body {
+  background-color: aqua;
+  width: 80%;
+  margin: auto;
+}

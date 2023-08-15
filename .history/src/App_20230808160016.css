@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aqua;
+  width: 90%;
+  margin: auto;
+}
+
+
+.App {
+  text-align: center;
+}
+
+
+.active {
+  color:#DECB1D !important ;
+}
+
+.my_navbar {
+  background-color: #DECB1D;
+  margin: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
