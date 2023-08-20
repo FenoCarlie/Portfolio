@@ -10,7 +10,7 @@ const Project = () => {
         document.body.style.background = background;
 
         return () => {
-            document.body.style.background = "";
+            document.body.style.background = ""; // Réinitialiser le style du corps lorsque le composant est démonté
         };
     }, []);
 

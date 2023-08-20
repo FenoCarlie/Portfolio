@@ -420,23 +420,3 @@ background-size: cover;
       -webkit-backdrop-filter: blur( 5px );
       border-radius: 10px;
   }
-  
-/* Animation de haut en bas */
-@keyframes slideDown {
-  from {
-      transform: translateY(-100%);
-  }
-  to {
-      transform: translateY(0);
-  }
-}
-
-/* Animation de bas en haut */
-@keyframes slideUp {
-  from {
-      transform: translateY(100%);
-  }
-  to {
-      transform: translateY(0);
-  }
-}

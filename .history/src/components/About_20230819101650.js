@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 function About() {
-    const [showAbout, setShowAbout] = useState(true);
-    const [showTechnicalSkills, setShowTechnicalSkills] = useState(false);
-    const [showProfessionalSkills, setShowProfessionalSkills] = useState(false);
+    const [showFirstParagraph, setShowFirstParagraph] = useState(true);
     
 
     useEffect(() => {
@@ -30,11 +28,7 @@ function About() {
 
     const shift = (click) => {
         const clicked = click.target;
-        const buttonText = clicked.textContent;
-
-        setShowAbout(buttonText === "About me");
-        setShowTechnicalSkills(buttonText === "Technical Skills");
-        setShowProfessionalSkills(buttonText === "Professional Skills");
+        setShowFirstParagraph(clicked.textContent === "About me");
     };
 
     return (
@@ -54,41 +48,24 @@ function About() {
                     <div className="col">
                         <h1>About me</h1>
                         <div id='mininav'>
-                            <button
-                                className={`mininav-button ${showAbout ? 'used' : ''}`}
+                        <button
+                                className={`mininav-button ${showFirstParagraph ? 'used' : ''}`}
                                 onClick={shift}
                             >
                                 About me
                             </button>
                             <button
-                                className={`mininav-button ${showTechnicalSkills ? 'used' : ''}`}
+                                className={`mininav-button ${!showFirstParagraph ? 'used' : ''}`}
                                 onClick={shift}
                             >
-                                Technical Skills
-                            </button>
-                            <button
-                                className={`mininav-button ${showProfessionalSkills ? 'used' : ''}`}
-                                onClick={shift}
-                            >
-                                Professional Skills
+                                Skills
                             </button>
                         </div>
-                        <div className={`desciption slide ${showAbout ? '' : 'hide'}`}>
-                            <p>
-                                I'm a passionate computer science student, currently in the second year of my studies. My curiosity and interest in the IT field have enabled me to acquire a solid knowledge base in programming and web development. I'm constantly on the lookout for new learning opportunities to develop my skills and familiarize myself with the latest technologies. My goal is to continue my professional growth in the IT field by actively contributing to stimulating projects.
-                            </p>
-                            
-                            
+                        <div className={`desciption slide ${showFirstParagraph ? '' : 'hide'}`}>
+                            I'm a passionate computer science student, currently in the second year of my studies. My curiosity and interest in the IT field have enabled me to acquire a solid knowledge base in programming and web development. I'm constantly on the lookout for new learning opportunities to develop my skills and familiarize myself with the latest technologies. My goal is to continue my professional growth in the IT field by actively contributing to stimulating projects.
                         </div>
-                        <div className={`slide ${showTechnicalSkills ? '' : 'hide'}`}>
-                            <div className='transparent-card'>
-                                <p>My favorite <ins>color</ins> is red.</p>
-                            </div>
-                        </div>
-                        <div className={`slide ${showProfessionalSkills ? '' : 'hide'}`}>
-                            <div className='transparent-card'>
-                                <p>My favorite <ins>color</ins> is red.</p>
-                            </div>
+                        <div className={`transparent-card slide ${showFirstParagraph ? 'hide' : ''}`}>
+                            <p>My favorite <ins>color</ins> is red.</p>
                         </div>
                     </div>
                 </div>

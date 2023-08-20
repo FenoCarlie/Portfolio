@@ -1,7 +1,3 @@
-@font-face {
-  font-family: Rubik;
-  src: url("./font/Rubik/static/Rubik-Regular.ttf");
-}
 /* Pour les écrans plus petits que 768px */
 @media (max-width: 767px) {
   .banner {
@@ -327,7 +323,6 @@ font-size: 25px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-padding-right: 90px;
 }
 
 .overlay-image {
@@ -352,36 +347,8 @@ background: url(./img&logo/277885383_310685924470295_5223897220565660050_n.jpg),
 background-position: center;
 background-size: cover;
 }
-.about button {
-  border: none;
-  background: none;
-  border: none;
-  background: none;
-  height: 100%;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  padding-right: 50px;
-}
 
-.mininav-button.used {
-  color: #9B43C5;
-}
-
-.mininav-button {
-  color: #ffffff;
-}
-
-.pt-4 {
-  padding-top: 50px;
-}
 /************************/
-
-.slide {
-  padding-top: 50px;
-}
-
 
 
 .hide {  display: none;  }
@@ -410,33 +377,3 @@ background-size: cover;
       top: 1em;
       right: 1em;
     }
-
-    .transparent-card {
-      font-size: 25px;
-      padding: 25px;
-      background: rgba( 255, 255, 255, 0.25 );
-      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-      backdrop-filter: blur( 5px );
-      -webkit-backdrop-filter: blur( 5px );
-      border-radius: 10px;
-  }
-  
-/* Animation de haut en bas */
-@keyframes slideDown {
-  from {
-      transform: translateY(-100%);
-  }
-  to {
-      transform: translateY(0);
-  }
-}
-
-/* Animation de bas en haut */
-@keyframes slideUp {
-  from {
-      transform: translateY(100%);
-  }
-  to {
-      transform: translateY(0);
-  }
-}

@@ -10,7 +10,7 @@ const Contact = () => {
         document.body.style.background = background;
 
         return () => {
-            document.body.style.background = "";
+            document.body.style.background = ""; // Réinitialiser le style du corps lorsque le composant est démonté
         };
     }, []);
 
@@ -22,7 +22,7 @@ const Contact = () => {
                         
                     </div>
                     <div className="col">
-
+                    
                     </div>
                 </div>
             </div>
