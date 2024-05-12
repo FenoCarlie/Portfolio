@@ -1,0 +1,65 @@
+[
+  {
+    "name": "HTML",
+    "description": {
+      "experience": "3 year",
+      "level": 73
+    }
+  },
+  {
+    "name": "CSS",
+    "description": {
+      "experience": "3 year",
+      "level": 79
+    }
+  },
+  {
+    "name": "JavaScript",
+    "description": {
+      "experience": "3 year",
+      "level": 62
+    }
+  },
+  {
+    "name": "PHP",
+    "description": {
+      "experience": "1 year",
+      "level": 46
+    }
+  },
+  {
+    "name": "React.js",
+    "description": {
+      "experience": "2 year",
+      "level": 80
+    }
+  },
+  {
+    "name": "Node.js",
+    "description": {
+      "experience": "1 year",
+      "level": 50
+    }
+  },
+  {
+    "name": "MySQL",
+    "description": {
+      "experience": "3 year",
+      "level": 70
+    }
+  },
+  {
+    "name": "MongoDb",
+    "description": {
+      "experience": "1 year",
+      "level": 45
+    }
+  },
+  {
+    "name": "PostgreSQL",
+    "description": {
+      "experience": "1 year",
+      "level": 30
+    }
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "titled": "First year of professional license in Software and Database Engineering",
+    "location": "Ecole national d'informatique de Fianarantsoa - ENI",
+    "time": {
+      "start": "2021",
+      "end": "2022"
+    },
+    "description": ""
+  },
+  {
+    "titled": "Second year of professional license in Software and Database Engineering",
+    "location": "Ecole national d'informatique de Fianarantsoa - ENI",
+    "time": {
+      "start": "2022",
+      "end": "2023"
+    },
+    "description": ""
+  },
+  {
+    "titled": "Third year of professional license in Software and Database Engineering",
+    "location": "Ecole national d'informatique de Fianarantsoa - ENI",
+    "time": {
+      "start": "2023",
+      "end": "2024"
+    },
+    "description": ""
+  }
+]
