@@ -33,11 +33,10 @@ function App() {
           className="w-full overflow-auto focus:outline-none h-full"
           tabIndex={0}
         >
-          {links.map((link) => (
-            <div name={link.url} key={link.title} className="h-full w-full">
-              {link.title}
-            </div>
-          ))}
+          <Home />
+          <AboutPage />
+          <PortfolioPage />
+          <ContactPage />
         </div>
       </div>
     </>
