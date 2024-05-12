@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import TrackVisibility from "react-on-screen";
 import { FaLinkedin, FaGithub, FaFacebook, FaInstagram } from "react-icons/fa6";
+import CircleAnimation from "./../../../components/circleAnimation";
+import { assets } from "./../../../assets/assets";
 
 function Home() {
   const [loopNum, setLoopNum] = useState(0);
@@ -96,13 +98,17 @@ function Home() {
             </div>
             <section className="flex w-full items-center mt-20 ">
               <button className="px-4 py-2 border-4 border-yellowClaire rounded text-white text-2xl">
-                Contact
+                Lets's talk
               </button>
             </section>
           </TrackVisibility>
         </section>
-        <section className="hidden p-4 lg:flex xl:flex xl:w-[50%] lg:w-[50%] lg:h-full- xl:h-full">
-          <div className="w-[550px] opacity-50 h-[550px] absolute left-[40%] top-[35%] origin-bottom-right border-[2px] border-yellowClaire rounded-full"></div>
+        <section className="hidden items-center p-4 lg:flex xl:flex xl:w-[50%] lg:w-[50%] lg:h-full- xl:h-full">
+          <img
+            src={assets.homeDesign}
+            alt="image"
+            className="w-[100vh] xl:w-[100vh] lg:w-[100vh] h-auto overflow-hidden"
+          />
         </section>
         <section className="h-full items-center flex-col justify-end flex">
           {socialNets.map((socialNet) => (
