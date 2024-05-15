@@ -4,7 +4,6 @@ import ProgressBar from "./PreogresBar";
 import Marquee from "react-fast-marquee";
 
 function SkillsBar() {
-  console.log(skills);
   return (
     <>
       <div className="flex flex-row marquee">

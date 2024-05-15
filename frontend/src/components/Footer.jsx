@@ -26,11 +26,7 @@ function Footer() {
   ];
   return (
     <div className="w-full bg-greyGlass">
-      <div className="p-4 sm:px-10 lg:px-20 xl:px-30 flex items-center justify-between">
-        <p className="text-grey1">
-          This page was coded in React.js, CSS, and Tailwind CSS.
-        </p>
-      </div>
+      <div className="p-4 sm:px-10 h-10 lg:px-20 xl:px-30 flex items-center justify-between"></div>
     </div>
   );
 }

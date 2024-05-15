@@ -18,8 +18,6 @@ function NavLink({ link }) {
       setActive(url);
       console.log(url);
     });
-
-    //<Navigate to="/home" />
   }, []);
 
   return (

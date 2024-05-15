@@ -79,9 +79,8 @@ function Home() {
         <section className=" flex items-center h-hull w-full p-4 xl:w-[50%] lg:w-[50%]">
           <TrackVisibility className="w-full">
             <div className={"w-full"}>
-              <span className="text-yellowClaire flex items-end">
-                <h3 className="mr-2 text-3xl lg:text-5xl">-- Hi, i'm</h3>
-                <h1 className="text-4xl lg:text-6xl">Carlie FENO</h1>
+              <span className="text-yellowClaire flex mb-2">
+                <h1 className="text-4xl lg:text-5xl">-- Hi, i'm Carlie FENO</h1>
               </span>
               <h1>
                 <p
@@ -89,16 +88,22 @@ function Home() {
                   data-rotate='[ "Web Designer", "UI / UX Designer", "Front-end Developer" ]'
                 >
                   <span className="text-3xl lg:text-5xl border-r-2 border-grey1">
-                    {text}
+                    .{text}
                   </span>
                 </p>
               </h1>
-              <h2 className="mlg text-grey1 lg:text-5xl">From Madagascar</h2>
+              <p className="mlg text-grey1 text md:text-3xl">
+                Grow your business with a high-performing and engaging website
+                that reflects your ambition.
+              </p>
             </div>
             <section className="flex w-full items-center mt-20 ">
-              <button className="px-4 hover:bg-yellowClaire hover:transition-all py-2 border-4 hover:text-black border-yellowClaire rounded text-white text-2xl">
+              <a
+                href="#contact"
+                className="px-4 hover:bg-yellowClaire hover:transition-all py-2 border-4 hover:text-black border-yellowClaire rounded text-white text-2xl"
+              >
                 Lets's talk
-              </button>
+              </a>
             </section>
           </TrackVisibility>
         </section>

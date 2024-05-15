@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { TfiAlignRight, TfiClose, TfiDownload } from "react-icons/tfi";
-import { Link } from "react-router-dom";
 import NavLink from "./NavLink";
 import { assets } from "../assets/assets";
+import resume from "../assets/FENO.pdf";
 
 const links = [
   { url: "#home", title: "Home" },
@@ -13,6 +13,9 @@ const links = [
 
 function NavBar() {
   const [open, setOpen] = useState(false);
+  const getResume = () => {
+    window.open(resume, "_blank");
+  };
 
   return (
     <div className="h-24 flex items-center bg-greyGlass justify-between px-4 sm:px-10 lg:px-20 xl:px-30 text-white select:none">
@@ -28,7 +31,12 @@ function NavBar() {
           ))}
         </ul>
       </div>
-      <button className="hidden animButton anim uppercase items-center md:flex ">
+      <button
+        onClick={() => {
+          getResume();
+        }}
+        className="hidden animButton anim uppercase items-center md:flex "
+      >
         <label className="mr-2">Get resume</label>
         <TfiDownload className="w-4 h-4" />
       </button>
@@ -54,16 +62,15 @@ function NavBar() {
                   setOpen(!open);
                 }}
               >
-                <NavLink
-                  key={link.title}
-                  link={link}
-                  onChange={() => {
-                    console.log("link : ", link);
-                  }}
-                />
+                <NavLink key={link.title} link={link} />
               </button>
             ))}
-            <button className="animButton anim flex items-center">
+            <button
+              onClick={() => {
+                getResume();
+              }}
+              className="animButton anim flex items-center"
+            >
               <label className="mr-2">Get resume</label>
               <TfiDownload className="w-7 h-7" />
             </button>

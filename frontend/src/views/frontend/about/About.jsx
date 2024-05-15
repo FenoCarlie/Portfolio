@@ -4,12 +4,11 @@ import experience from "../../../data/experience.json";
 import SkillsBar from "../../../components/SkillsBar";
 
 function AboutPage() {
-  console.log(background);
   return (
     <div id="about" className="w-full h-auto">
       <div className="flex items-center justify-center flex-col p-4 sm:px-10 lg:px-20 xl:px-30">
         <section className="flex flex-col w-full">
-          <h1 className="text-4xl text-white">About me</h1>
+          <h1 className="text-2xl md:text-4xl text-white">About me</h1>
           <div className="flex flex-col mb-10 h-[10px] w-full justify-between">
             <div className="bg-yellowClaire xl:w-[20%] lg:w-[25%] w-[50%] h-[2px]"></div>
             <div className="bg-yellowClaire xl:w-[15%] lg:w-[20%] w-[40%] h-[2px]"></div>
@@ -24,10 +23,10 @@ function AboutPage() {
             />
           </section>
           <section className="flex items-center justify-center lg:ml-5 xl:ml-5 w-full">
-            <div className="bg-greyGlass w-[85%] xl:h-auto lg:h-auto rounded h-auto p-7 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+            <div className="bg-greyGlass w-full md:w-[85%] xl:w-[85%] xl:h-auto lg:h-auto rounded h-auto p-7 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
               <div className="flex h-auto w-full justify-between flex-col">
                 <div className="bg-yellowClaire w-full h-1"></div>
-                <section className="h-auto w-full overflow-auto text-grey1 py-4">
+                <section className="h-auto w-full overflow-auto text-justify text-grey1 py-4">
                   <p className="indent-10">
                     Front-end developer and passionate about cooking as well as
                     mechanical sports, I enthusiastically juggle between these
@@ -65,7 +64,7 @@ function AboutPage() {
             <SkillsBar />
           </div>
           <span className="w-full flex justify-center my-7">
-            <h1 className="text-white text-3xl">My background</h1>
+            <h1 className="text-white text-3xl">My formation</h1>
           </span>
           <div className="relative w-full flex flex-col traced_path">
             <div className="absolute md:left-[50%] bg-yellowClaire h-full w-[2px]"></div>
