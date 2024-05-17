@@ -70,7 +70,7 @@ function GithubRepo() {
       {loading ? (
         <></>
       ) : (
-        <div className=" text-white grid grid-cols-1 lg:grid-cols-3 gap-4  h-auto">
+        <div className=" text-white grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4  h-auto">
           {repos.map((repo) => (
             <a
               href={`/${repo.git_url.slice(5)}`}
