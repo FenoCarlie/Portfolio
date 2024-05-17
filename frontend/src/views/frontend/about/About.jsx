@@ -68,7 +68,7 @@ function AboutPage() {
           </span>
           <div className="relative w-full flex flex-col traced_path">
             <div className="absolute md:left-[50%] bg-yellowClaire h-full w-[2px]"></div>
-            {background.map((background) => (
+            {background.reverse().map((background) => (
               <label
                 key={background.titled}
                 className="flex flex-col mb-3 md:w-[50%] pl-[25px]"
@@ -94,7 +94,7 @@ function AboutPage() {
           </span>
           <div className="relative w-full flex flex-col traced_path pb-7">
             <div className="absolute md:left-[50%] bg-yellowClaire h-full w-[2px]"></div>
-            {experience.map((experience) => (
+            {experience.reverse().map((experience) => (
               <label
                 key={experience.titled}
                 className="flex flex-col mb-3 md:w-[50%] pl-[25px]"
