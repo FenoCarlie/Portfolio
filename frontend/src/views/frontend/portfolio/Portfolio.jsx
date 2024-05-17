@@ -1,5 +1,6 @@
 import React from "react";
 import GithubRepo from "../../../components/GithubRepo";
+import GitContribution from "../../../components/GitContribution";
 
 function PortfolioPage() {
   return (
@@ -16,9 +17,7 @@ function PortfolioPage() {
           <span className="w-full flex justify-center my-7">
             <h1 className="text-white text-3xl">Repo GitHub</h1>
           </span>
-          <section>
-            <GithubRepo />
-          </section>
+          <GithubRepo />
         </section>
       </div>
     </div>

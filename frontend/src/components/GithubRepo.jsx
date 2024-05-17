@@ -7,7 +7,7 @@ function GithubRepo() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchReposAndCommitsLanguages = async () => {
+    const fetchRepos = async () => {
       try {
         setLoading(true);
         const response = await axios.get(
@@ -59,9 +59,8 @@ function GithubRepo() {
         console.error("Error fetching repos, commits, and languages:", error);
       }
     };
-    fetchReposAndCommitsLanguages();
+    fetchRepos();
   }, []);
-  3;
 
   console.log(repos);
 
