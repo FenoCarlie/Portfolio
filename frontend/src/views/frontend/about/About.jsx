@@ -13,7 +13,7 @@ function AboutPage() {
   console.log(formation);
 
   return (
-    <div id="about" className="w-full h-auto">
+    <div id="about" className="w-full">
       <div className="flex items-center justify-center flex-col p-4 sm:px-10 lg:px-20 xl:px-30">
         <section className="flex flex-col w-full">
           <h1 className="text-2xl md:text-4xl text-white">About me</h1>

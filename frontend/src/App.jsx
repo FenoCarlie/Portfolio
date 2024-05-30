@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { assets } from "./assets/assets";
 
 function App() {
+  const [hashId, setHashId] = useState("");
   const pageRef = useRef(null);
   const [loading, setLoading] = useState(true);
 
@@ -21,34 +22,76 @@ function App() {
     return () => clearTimeout(timeout);
   }, []);
 
-  /*useEffect(() => {
+  useEffect(() => {
     const pageElement = pageRef.current;
     if (pageElement == null) {
       return;
     }
-    var homeElement = document.getElementById("home");
-    var aboutElement = document.getElementById("about");
-    var portfolioElement = document.getElementById("portfolio");
-    var contactElement = document.getElementById("contact");
+    const homeElement = document.getElementById("home");
+    const aboutElement = document.getElementById("about");
+    const portfolioElement = document.getElementById("portfolio");
+    const contactElement = document.getElementById("contact");
 
-    var pageElementOffsetTop = pageElement.offsetTop;
-    var homeElementOffsetTop = homeElement.offsetTop;
-    var aboutElementOffsetTop = aboutElement.offsetTop;
-    var portfolioElementOffsetTop = portfolioElement.offsetTop;
-    var contactElementOffsetTop = contactElement.offsetTop;
-    pageElement.addEventListener("scroll", function () {
-      var pageElementScrollTop = pageElement.scrollTop;
-      var scrollPage = pageElementOffsetTop + pageElementScrollTop;
-      /*console.log(
-        homeElementOffsetTop,
-        aboutElementOffsetTop,
-        portfolioElementOffsetTop,
-        contactElementOffsetTop
-      );
+    const pageElementOffsetTop = pageElement.offsetTop;
+    const homeElementOffsetTop = homeElement.offsetTop;
+    const aboutElementOffsetTop = aboutElement.offsetTop;
+    const portfolioElementOffsetTop = portfolioElement.offsetTop;
+    const contactElementOffsetTop = contactElement.offsetTop;
 
-      console.log(scrollPage == homeElementOffsetTop);
-    });
-  }, [loading]);*/
+    const handleScroll = () => {
+      const pageElementScrollTop = pageElement.scrollTop;
+      const scrollPage = pageElementOffsetTop + pageElementScrollTop;
+      if (
+        scrollPage >= homeElementOffsetTop &&
+        scrollPage < aboutElementOffsetTop
+      ) {
+        if (hashId == "home") {
+          return;
+        } else {
+          history.pushState({}, "", "#home");
+          console.log("On home");
+        }
+      } else if (
+        scrollPage >= aboutElementOffsetTop &&
+        scrollPage < portfolioElementOffsetTop
+      ) {
+        if (hashId == "about") {
+          return;
+        } else {
+          history.pushState({}, "", "#about");
+          console.log("On about");
+        }
+      } else if (
+        scrollPage >= portfolioElementOffsetTop &&
+        scrollPage < contactElementOffsetTop
+      ) {
+        if (hashId == "portfolio") {
+          return;
+        } else {
+          history.pushState({}, "", "#portfolio");
+          console.log("On portfolio");
+        }
+      } else {
+        if (hashId == "contact") {
+          return;
+        } else {
+          history.pushState({}, "", "#contact");
+          console.log("On contact");
+        }
+      }
+    };
+
+    pageElement.addEventListener("scroll", handleScroll);
+
+    return () => {
+      pageElement.removeEventListener("scroll", handleScroll);
+    };
+  }, [hashId]);
+
+  useEffect(() => {
+    const hashFragment = window.location.hash.substring(1);
+    setHashId(hashFragment);
+  }, [hashId]);
 
   return (
     <>

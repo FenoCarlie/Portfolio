@@ -57,7 +57,7 @@ function ContactPage() {
   };
 
   return (
-    <div id="contact" className="w-full h-auto">
+    <div id="contact" className="w-full h-full flex flex-col justify-between">
       <div className="px-4 mb-10 flex flex-col items-center justify-center sm:px-10 lg:px-20 xl:px-30">
         <section className="flex flex-col w-full justify-center items-center">
           <h1 className="text-2xl md:text-4xl text-white">Contact</h1>
