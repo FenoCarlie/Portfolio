@@ -59,7 +59,7 @@ function NavBar() {
               <button
                 key={links.title}
                 onClick={() => {
-                  setOpen(!open);
+                  //setOpen(!open);
                 }}
               >
                 <NavLink key={link.title} link={link} />

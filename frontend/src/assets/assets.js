@@ -11,6 +11,7 @@ import mySql from "./mysql.png";
 import node from "./node-js.png";
 import postgreSql from "./postgresql.png";
 import tailwind from "./tailwind.png";
+import cv from "./FENO.pdf";
 
 export const assets = {
   html,
@@ -26,4 +27,5 @@ export const assets = {
   postgreSql,
   tailwind,
   logoCarlie,
+  cv,
 };

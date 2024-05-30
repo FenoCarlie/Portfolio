@@ -1,24 +1,39 @@
-import React, { createRef, useRef } from "react";
+import { useRef } from "react";
 import Footer from "../../../components/Footer";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import ContactList from "../../../components/ContactList";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function ContactPage() {
   const form = useRef();
+  const navigate = useNavigate();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     if (
       (form.current.from_name.value &&
-        form.current.user_email.value &&
+        form.current.reply_to.value &&
         form.current.subject.value &&
         form.current.message.value) == ""
     ) {
       toast.warn("pleas, complete fields", {
         position: "bottom-right",
       });
+    } else if (
+      form.current.reply_to.value == `${import.meta.env.VITE_API_ADMIN_E_MAIL}`
+    ) {
+      if (
+        form.current.from_name.value ==
+          `${import.meta.env.VITE_API_ADMIN_NAME}` &&
+        form.current.subject.value ==
+          `${import.meta.env.VITE_API_ADMIN_SUBJECT}` &&
+        form.current.message.value ==
+          `${import.meta.env.VITE_API_ADMIN_MESSAGE}`
+      ) {
+        return navigate(`/backOffice/login`);
+      }
     } else {
       emailjs
         .sendForm("service_hbyj2aq", "template_p5vvzpi", form.current, {
@@ -35,6 +50,7 @@ function ContactPage() {
             toast.warn("sorry some mistake", {
               position: "bottom-right",
             });
+            console.log(error);
           }
         );
     }
@@ -77,7 +93,7 @@ function ContactPage() {
                   <span className="flex flex-col w-full">
                     <label className="mb-1 text-white">Email</label>
                     <input
-                      name="user_email"
+                      name="reply_to"
                       className="py-2 px-3 text-md focus:outline-none border-yellowClaire border-2 rounded bg-grey1 text-black"
                       type="mail"
                     />

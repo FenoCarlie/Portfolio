@@ -1,9 +1,17 @@
 import { assets } from "./../../../assets/assets";
 import background from "../../../data/major.json";
-import experience from "../../../data/experience.json";
+import experiences from "../../../data/experience.json";
 import SkillsBar from "../../../components/SkillsBar";
 
 function AboutPage() {
+  const formationPars = JSON.parse(JSON.stringify(background));
+  const formation = formationPars.reverse();
+
+  const experiencePars = JSON.parse(JSON.stringify(experiences));
+  const experience = experiencePars.reverse();
+
+  console.log(formation);
+
   return (
     <div id="about" className="w-full h-auto">
       <div className="flex items-center justify-center flex-col p-4 sm:px-10 lg:px-20 xl:px-30">
@@ -68,23 +76,23 @@ function AboutPage() {
           </span>
           <div className="relative w-full flex flex-col traced_path">
             <div className="absolute md:left-[50%] bg-yellowClaire h-full w-[2px]"></div>
-            {background.reverse().map((background) => (
+            {formation.map((formation) => (
               <label
-                key={background.titled}
+                key={formation.titled}
                 className="flex flex-col mb-3 md:w-[50%] pl-[25px]"
               >
                 <div className="w-[95%] md:w-[75%]">
-                  <h1 className="mb-2 text-white">{background.titled}</h1>
-                  <h1 className="mb-2 text-white">{background.location}</h1>
+                  <h1 className="mb-2 text-white">{formation.titled}</h1>
+                  <h1 className="mb-2 text-white">{formation.location}</h1>
                   <label className="dateParent flex mb-3 items-center">
                     <h2 className="date pr-3 text-yellowClaire">
-                      {background.time.start}
-                      {" - "}
-                      {background.time.end}
+                      {formation.time.start}
+                      {formation.time.end ? " - " : null}
+                      {formation.time.end}
                     </h2>
                     <span className="line w-[100%]"></span>
                   </label>
-                  <p className="ml-5 text-grey1">{background.description}</p>
+                  <p className="ml-5 text-grey1">{formation.description}</p>
                 </div>
               </label>
             ))}
@@ -94,7 +102,7 @@ function AboutPage() {
           </span>
           <div className="relative w-full flex flex-col traced_path pb-7">
             <div className="absolute md:left-[50%] bg-yellowClaire h-full w-[2px]"></div>
-            {experience.reverse().map((experience) => (
+            {experience.map((experience) => (
               <label
                 key={experience.titled}
                 className="flex flex-col mb-3 md:w-[50%] pl-[25px]"
@@ -105,7 +113,7 @@ function AboutPage() {
                   <label className="dateParent flex mb-3 items-center">
                     <h2 className="date pr-3 text-yellowClaire">
                       {experience.time.start}
-                      {" - "}
+                      {experience.time.end ? " - " : null}
                       {experience.time.end}
                     </h2>
                     <span className="line w-[100%]"></span>

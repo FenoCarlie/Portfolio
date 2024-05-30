@@ -4,8 +4,7 @@ const StateContext = createContext({
   currentUser: null,
   token: null,
   notification: null,
-  setUser: () => {},
-  setItineraryId: () => {},
+
   setToken: () => {},
   setNotification: () => {},
   setAlert: () => {},
@@ -13,13 +12,8 @@ const StateContext = createContext({
 });
 
 export const ContextProvider = ({ children }) => {
-  const [user, _setUser] = useState(
-    JSON.parse(sessionStorage.getItem("ACCESS_USER"))
-  );
   const [token, _setToken] = useState(sessionStorage.getItem("ACCESS_TOKEN"));
-  var [itineraryId, _setItineraryId] = useState(
-    sessionStorage.getItem("ITINERARY_ID")
-  );
+
   const [notification, _setNotification] = useState("");
   const [alert, _setAlert] = useState("");
   const [error, _setError] = useState("");
@@ -30,24 +24,6 @@ export const ContextProvider = ({ children }) => {
       sessionStorage.setItem("ACCESS_TOKEN", token);
     } else {
       sessionStorage.removeItem("ACCESS_TOKEN");
-    }
-  };
-
-  const setUser = (user) => {
-    _setUser(user);
-    if (user) {
-      sessionStorage.setItem("ACCESS_USER", JSON.stringify(user));
-    } else {
-      sessionStorage.removeItem("ACCESS_USER");
-    }
-  };
-
-  const setItineraryId = (itineraryId) => {
-    _setItineraryId(itineraryId);
-    if (itineraryId) {
-      sessionStorage.setItem("ITINERARY_ID", itineraryId);
-    } else {
-      sessionStorage.removeItem("ITINERARY_ID");
     }
   };
 
@@ -77,16 +53,14 @@ export const ContextProvider = ({ children }) => {
       sessionStorage.clear();
     }, 4 * 60 * 60 * 1000);
 
+    setToken(1234);
+
     return () => clearTimeout(sessionTimeout);
   }, []);
 
   return (
     <StateContext.Provider
       value={{
-        user,
-        setUser,
-        itineraryId,
-        setItineraryId,
         token,
         setToken,
         notification,

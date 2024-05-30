@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { skills } from "../data/Skills";
 import ProgressBar from "./PreogresBar";
 import Marquee from "react-fast-marquee";
