@@ -8,8 +8,10 @@ import Home from "./views/frontend/home/Home";
 import PortfolioPage from "./views/frontend/portfolio/Portfolio";
 import "react-toastify/dist/ReactToastify.css";
 import { assets } from "./assets/assets";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigation = useNavigate();
   const [hashId, setHashId] = useState("");
   const pageRef = useRef(null);
   const [loading, setLoading] = useState(true);
@@ -22,7 +24,7 @@ function App() {
     return () => clearTimeout(timeout);
   }, []);
 
-  useEffect(() => {
+  /*useEffect(() => {
     const pageElement = pageRef.current;
     if (pageElement == null) {
       return;
@@ -41,44 +43,58 @@ function App() {
     const handleScroll = () => {
       const pageElementScrollTop = pageElement.scrollTop;
       const scrollPage = pageElementOffsetTop + pageElementScrollTop;
+      var currentPage = null;
       if (
         scrollPage >= homeElementOffsetTop &&
         scrollPage < aboutElementOffsetTop
       ) {
+        currentPage = "home";
         if (hashId == "home") {
           return;
         } else {
-          history.pushState({}, "", "#home");
+          //history.pushState({}, "", "#home");
+          //navigation("/#home");
           console.log("On home");
         }
       } else if (
         scrollPage >= aboutElementOffsetTop &&
         scrollPage < portfolioElementOffsetTop
       ) {
+        currentPage = "about";
         if (hashId == "about") {
           return;
         } else {
-          history.pushState({}, "", "#about");
+          //history.pushState({}, "", "#about");
+          //navigation("/#about");
           console.log("On about");
         }
       } else if (
         scrollPage >= portfolioElementOffsetTop &&
         scrollPage < contactElementOffsetTop
       ) {
+        currentPage = "portfolio";
         if (hashId == "portfolio") {
           return;
         } else {
-          history.pushState({}, "", "#portfolio");
+          //history.pushState({}, "", "#portfolio");
+          //navigation("/#portfolio");
           console.log("On portfolio");
         }
       } else {
+        currentPage = "contact";
         if (hashId == "contact") {
           return;
         } else {
-          history.pushState({}, "", "#contact");
+          //history.pushState({}, "", "#contact");
+          //navigation("/#contact");
           console.log("On contact");
         }
       }
+      if (currentPage[0] != "#") {
+        currentPage = "#" + currentPage;
+      }
+      console.log(currentPage);
+      history.pushState({}, "", currentPage);
     };
 
     pageElement.addEventListener("scroll", handleScroll);
@@ -86,12 +102,12 @@ function App() {
     return () => {
       pageElement.removeEventListener("scroll", handleScroll);
     };
-  }, [hashId]);
+  }, [hashId, navigation]);
 
   useEffect(() => {
     const hashFragment = window.location.hash.substring(1);
     setHashId(hashFragment);
-  }, [hashId]);
+  }, [hashId]);*/
 
   return (
     <>

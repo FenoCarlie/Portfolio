@@ -4,6 +4,7 @@ function NavLink({ link }) {
   const [active, setActive] = useState();
   useEffect(() => {
     var url = location.hash;
+    console.log(url);
     if (url.length < 1) {
       url = "#home";
     }
