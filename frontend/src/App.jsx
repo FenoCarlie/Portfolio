@@ -137,7 +137,7 @@ function App() {
               <ToastContainer />
               <Home />
               <AboutPage />
-              <PortfolioPage />
+              {/* <PortfolioPage /> */}
               <ContactPage />
             </div>
           </>

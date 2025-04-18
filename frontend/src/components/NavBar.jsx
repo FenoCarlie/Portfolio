@@ -7,7 +7,7 @@ import resume from "../assets/FENO.pdf";
 const links = [
   { url: "#home", title: "Home" },
   { url: "#about", title: "About" },
-  { url: "#portfolio", title: "Portfolio" },
+  // { url: "#portfolio", title: "Portfolio" },
   { url: "#contact", title: "Contact" },
 ];
 
@@ -24,13 +24,13 @@ function NavBar() {
           <img src={assets.logoCarlie} className="w-[130px]" />
         </a>
       </div>
-      <div className="hidden md:flex gap-4">
+      {/* <div className="hidden md:flex gap-4">
         <ul>
           {links.map((link) => (
             <NavLink key={link.title} link={link} />
           ))}
         </ul>
-      </div>
+      </div> */}
       <button
         onClick={() => {
           getResume();
@@ -40,7 +40,7 @@ function NavBar() {
         <label className="mr-2">Get resume</label>
         <TfiDownload className="w-4 h-4" />
       </button>
-      <div className="md:hidden">
+      {/* <div className="md:hidden">
         <button
           className="z-50 relative"
           onClick={() => {
@@ -76,7 +76,7 @@ function NavBar() {
             </button>
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }

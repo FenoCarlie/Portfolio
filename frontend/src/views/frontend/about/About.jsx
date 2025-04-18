@@ -66,13 +66,15 @@ function AboutPage() {
         </div>
         <div className="h-full w-full md:w-[90%] bg-greyGlass mt-4 p-4 rounded">
           <span className="w-full flex justify-center my-7">
-            <h1 className="text-white text-3xl">My skills</h1>
+            <h1 className="text-white text-3xl uppercase">skills</h1>
           </span>
-          <div className="w-full flex h-auto py-10 px-6">
+          <div className="w-full flex h-auto py-10 px-6 justify-center">
             <SkillsBar />
           </div>
           <span className="w-full flex justify-center my-7">
-            <h1 className="text-white text-3xl">My formation</h1>
+            <h1 className="text-white text-3xl uppercase">
+              formation & experience
+            </h1>
           </span>
           <div className="relative w-full flex flex-col traced_path">
             <div className="absolute md:left-[50%] bg-yellowClaire h-full w-[2px]"></div>
@@ -93,32 +95,6 @@ function AboutPage() {
                     <span className="line w-[100%]"></span>
                   </label>
                   <p className="ml-5 text-grey1">{formation.description}</p>
-                </div>
-              </label>
-            ))}
-          </div>
-          <span className="w-full flex justify-center my-7">
-            <h1 className="text-white text-3xl">My experience</h1>
-          </span>
-          <div className="relative w-full flex flex-col traced_path pb-7">
-            <div className="absolute md:left-[50%] bg-yellowClaire h-full w-[2px]"></div>
-            {experience.map((experience) => (
-              <label
-                key={experience.titled}
-                className="flex flex-col mb-3 md:w-[50%] pl-[25px]"
-              >
-                <div className="w-[95%] md:w-[75%]">
-                  <h1 className="mb-2 text-white">{experience.titled}</h1>
-                  <h1 className="mb-2 text-white">{experience.location}</h1>
-                  <label className="dateParent flex mb-3 items-center">
-                    <h2 className="date pr-3 text-yellowClaire">
-                      {experience.time.start}
-                      {experience.time.end ? " - " : null}
-                      {experience.time.end}
-                    </h2>
-                    <span className="line w-[100%]"></span>
-                  </label>
-                  <p className="ml-5 text-grey1">{experience.description}</p>
                 </div>
               </label>
             ))}

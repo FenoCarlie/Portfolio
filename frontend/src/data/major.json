@@ -18,13 +18,22 @@
     "description": "The second year built upon the foundation laid in the first year of training. We delved deeper into algorithmics and programming languages such as C++, C#, Java, and PHP, while also beginning to learn about database management systems like MySQL and PostgreSQL. At the end of the year, I completed an internship and carried out a project."
   },
   {
+    "titled": "Developer intern",
+    "location": "Madagascar Coastal Container Line - MCCL",
+    "time": {
+      "start": "September 2023",
+      "end": "November 2023"
+    },
+    "description": "For two months, I completed my internship as a developer intern. My main objective was to develop my professional skills, particularly in programming and professional relationships. I designed a web application for container terminal management using React.js, Node.js, and MySQL, allowing me to explore new technologies. In addition to this, I also worked on various office tasks and computer maintenance, as well as field tasks, thus demonstrating my versatility and ability to adapt to any situation."
+  },
+  {
     "titled": "Third year of professional license in Software and Database Engineering",
     "location": "Ecole national d'informatique de Fianarantsoa - ENI",
     "time": {
       "start": "2023",
       "end": "2024"
     },
-    "description": ""
+    "description": "Bachelor’s degree in Software Engineering and Databases."
   },
   {
     "titled": "Entrepreneurial Marketing Training",
@@ -34,5 +43,14 @@
       "end": ""
     },
     "description": "For two intensive days, I participated in this training organized by ARONE Madagascar and received a certificate for my diligent participation."
+  },
+  {
+    "titled": "Full-stack developer at LAZ GLOBAL CORPORATION",
+    "location": "Pointe-Noire, Congo-Brazzaville - Remot",
+    "time": {
+      "start": "August 2024",
+      "end": "Novombre 2024"
+    },
+    "description": "During this internship, I enhanced my skills in full-stack development and gained valuable professional experience. I had the opportunity to work on enriching projects and take part in leading a team, which strengthened my leadership, communication, and project management abilities."
   }
 ]
